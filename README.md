@@ -3,12 +3,7 @@
 ## Run MYSQL
 
 ```bash
-docker run -itd -p 3316:3306 \
-  -v "${pwd}/db/script/setup.sql:/docker-entrypoint-initdb.d/setup.sql" \
-  -e MYSQL_ROOT_PASSWORD=root1234 \
-  -v mysql_data:/var/lib/mysql \
-  mysql:5.7 \
-  --default-authentication-plugin=mysql_native_password
+docker run -itd -p 3316:3306 -v "${pwd}/db/script/setup.sql:/docker-entrypoint-initdb.d/setup.sql" -e MYSQL_ROOT_PASSWORD=root1234 -v mysql_data:/var/lib/mysql mysql:5.7
 ```
 
 ## Build App & Run
@@ -17,7 +12,7 @@ docker run -itd -p 3316:3306 \
 
 ```
 # windows:
-ifconfig /all
+ipconfig /all
 
 # ubuntu
 ip address
