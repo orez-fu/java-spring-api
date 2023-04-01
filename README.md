@@ -4,7 +4,7 @@
 
 ```bash
 docker run -itd -p 3316:3306 \
-  -v "./db/script/setup.sql:/docker-entrypoint-initdb.d/setup.sql" \
+  -v "${pwd}/db/script/setup.sql:/docker-entrypoint-initdb.d/setup.sql" \
   -e MYSQL_ROOT_PASSWORD=root1234 \
   -v mysql_data:/var/lib/mysql \
   mysql:5.7 \
