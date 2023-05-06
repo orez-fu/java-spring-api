@@ -18,4 +18,6 @@ WORKDIR /opt/app
 # Copy the spring-boot-api-tutorial.jar from the builder stage to the /opt/app directory of the current stage.
 COPY --from=builder /usr/src/app/target/${JAR_FILE} /opt/app/
 
+EXPOSE 8080
+
 ENTRYPOINT ["java","-jar","spring-boot-api-tutorial.jar"]
