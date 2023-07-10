@@ -24,6 +24,8 @@ ip address
 
 ```bash
 docker build -t java-api:v1.0 -f Dockerfile .
+# 
+# docker build -t java-api:v3 -f Dockerfile .
 ```
 
 4. Run container
