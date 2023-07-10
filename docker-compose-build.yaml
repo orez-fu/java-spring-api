@@ -13,6 +13,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
+    command: ["java", "-Dspring.config.location=/configs/application.properties","-jar","spring-boot-api-tutorial.jar"]
+    volumes:
+    - $PWD/config/:/configs/
     depends_on:
     - db
     ports:
